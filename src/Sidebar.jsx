@@ -8,7 +8,7 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__header">
         <div className="sidebar__info">
-          <h2>Thales Slack</h2>
+          <h2>Thales' Slack Chanell</h2>
           <h3>
             <FiberManualRecordIcon />
             Thales Avila
