@@ -3,6 +3,7 @@
   border-top: 1px solid #49274b;
   max-width: 260px;
   color: white;
+  flex: 0.3;
 }
 
 .sidebar>hr {
@@ -48,4 +49,5 @@
   font-size: 18px;
   background: #FFF;
   border-radius: 999px;
+  cursor: pointer;
 }
