@@ -3,6 +3,7 @@ import "./Chat.css";
 import { useParams } from "react-router-dom";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
+import Message from "./Message";
 import db from "./firebase";
 
 function Chat() {
@@ -20,7 +21,7 @@ function Chat() {
 
       db.collection("channels")
         .doc(roomId)
-        .collection("message")
+        .collection("messages")
         .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           setRoomMessages(snapshot.docs.map((docs) => docs.data()));
@@ -43,6 +44,16 @@ function Chat() {
             <InfoOutlinedIcon /> Details
           </p>
         </div>
+      </div>
+      <div className="chat__messages">
+        {roomMessages?.map(({ message, timestamp, user, userImage }) => (
+          <Message
+            message={message}
+            timestamp={timestamp}
+            user={user}
+            userImage={userImage}
+          />
+        ))}
       </div>
     </div>
   );
