@@ -2,15 +2,19 @@ import React from "react";
 import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Chat from "./Chat";
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }] = useStateValue();
   return (
-    // BEM naming convention
     <Router>
       <div className="app">
         {!user ? (
@@ -25,7 +29,7 @@ function App() {
                   <Chat />
                 </Route>
                 <Route path="/">
-                  <h1>Welcome</h1>
+                  <Redirect to="/rooms/9XtcxltG8iZTyJyM2QUl" />
                 </Route>
               </Switch>
             </div>

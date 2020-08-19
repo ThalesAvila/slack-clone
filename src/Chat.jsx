@@ -52,6 +52,7 @@ function Chat() {
             timestamp={timestamp}
             user={user}
             userImage={userImage}
+            key={timestamp}
           />
         ))}
       </div>
