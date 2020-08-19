@@ -5,6 +5,7 @@ import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import Message from "./Message";
 import db from "./firebase";
+import ChatInput from "./ChatInput";
 
 function Chat() {
   const { roomId } = useParams();
@@ -29,7 +30,6 @@ function Chat() {
     }
   }, [roomId]);
 
-  console.log({ roomMessages });
   return (
     <div className="chat">
       <div className="chat__header">
@@ -56,6 +56,7 @@ function Chat() {
           />
         ))}
       </div>
+      <ChatInput channelName={roomDetails?.name} channelId={roomId} />
     </div>
   );
 }
