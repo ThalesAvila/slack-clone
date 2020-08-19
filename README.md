@@ -7,6 +7,7 @@ Versão live: https://ta-slack-clone.web.app/
 - React Context API
 - Material UI 
 - CSS Variables
+- BEM
 - React Router
 - Flexbox
 - Deploy com Firebase
