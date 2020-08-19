@@ -1,11 +1,12 @@
 # Projeto do Slack Clone
-Versão live: https://ta-slack-clone.web.app/
+Live: https://ta-slack-clone.web.app/
 
 ## Stack utilizado:
+
 - ReactJS
 - Google User Authentication (Firebase)
 - React Context API
-- Material UI 
+- Material UI
 - CSS Variables
 - React Router
 - Flexbox
